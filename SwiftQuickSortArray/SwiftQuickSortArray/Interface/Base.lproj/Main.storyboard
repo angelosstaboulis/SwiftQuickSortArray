@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftQuickSortArray" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fpz-bk-AoP">
+                                <rect key="frame" x="0.0" y="0.0" width="424" height="912"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="T3y-WA-7gx" customClass="HeaderView" customModule="SwiftQuickSortArray" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="424" height="133"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftQuickSortArray" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8t-xb-XvI">
+                                            <rect key="frame" x="121" y="5" width="155" height="21"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubw-MV-Hhx">
+                                            <rect key="frame" x="6" y="42" width="112" height="31"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="112" id="jjo-UP-P3W"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Fill Array"/>
+                                            <connections>
+                                                <action selector="btnFillArray:" destination="96a-pM-IcD" eventType="touchUpInside" id="tqx-ao-edH"/>
+                                                <action selector="btnFillArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSB-Fy-nd0"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDs-sr-6Di">
+                                            <rect key="frame" x="107" y="42" width="111" height="31"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="111" id="YbR-Yq-nes"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Sort Array"/>
+                                            <connections>
+                                                <action selector="btnSortArray:" destination="96a-pM-IcD" eventType="touchUpInside" id="KZ4-91-QZE"/>
+                                                <action selector="btnSortArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v30-nH-k9U"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4S-1X-FkU">
+                                            <rect key="frame" x="215" y="23" width="112" height="68"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="112" id="CuK-Pf-3UA"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Clear List"/>
+                                            <connections>
+                                                <action selector="btnClearList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uvz-bi-6Wv"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqA-Vh-OzJ">
+                                            <rect key="frame" x="321" y="42" width="74" height="31"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Refresh"/>
+                                            <connections>
+                                                <action selector="btnRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1oW-l8-q4R"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="yDs-sr-6Di" firstAttribute="centerY" secondItem="w4S-1X-FkU" secondAttribute="centerY" id="2rm-Nr-paW"/>
+                                        <constraint firstItem="yDs-sr-6Di" firstAttribute="top" secondItem="l8t-xb-XvI" secondAttribute="bottom" constant="16" id="DRz-Lj-Bd9"/>
+                                        <constraint firstItem="l8t-xb-XvI" firstAttribute="leading" secondItem="T3y-WA-7gx" secondAttribute="leading" constant="121" id="HEJ-Pe-lgL"/>
+                                        <constraint firstItem="ubw-MV-Hhx" firstAttribute="leading" secondItem="T3y-WA-7gx" secondAttribute="leading" constant="6" id="T1r-tf-z2g"/>
+                                        <constraint firstItem="yDs-sr-6Di" firstAttribute="leading" secondItem="T3y-WA-7gx" secondAttribute="leading" constant="107" id="TWE-hu-Hbp"/>
+                                        <constraint firstItem="ubw-MV-Hhx" firstAttribute="baseline" secondItem="yDs-sr-6Di" secondAttribute="baseline" id="XlZ-WU-eQx"/>
+                                        <constraint firstItem="l8t-xb-XvI" firstAttribute="top" secondItem="T3y-WA-7gx" secondAttribute="top" constant="5" id="ct2-jn-A4h"/>
+                                        <constraint firstItem="w4S-1X-FkU" firstAttribute="leading" secondItem="ubw-MV-Hhx" secondAttribute="trailing" constant="97" id="dOy-3T-LXe"/>
+                                        <constraint firstItem="JqA-Vh-OzJ" firstAttribute="leading" secondItem="yDs-sr-6Di" secondAttribute="trailing" constant="103" id="gJP-zd-93C"/>
+                                        <constraint firstItem="w4S-1X-FkU" firstAttribute="top" secondItem="T3y-WA-7gx" secondAttribute="top" constant="23" id="jOQ-jc-eeS"/>
+                                        <constraint firstItem="JqA-Vh-OzJ" firstAttribute="top" secondItem="T3y-WA-7gx" secondAttribute="top" constant="42" id="k3R-ci-yfq"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="wf3-1m-KdW">
+                                    <rect key="frame" x="0.0" y="243.5" width="424" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Jg8-ko-7XE">
+                                        <rect key="frame" x="0.0" y="177.5" width="424" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jg8-ko-7XE" id="MpK-y3-Rt4">
+                                            <rect key="frame" x="0.0" y="0.0" width="424" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fpz-bk-AoP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4C4-DJ-K7D"/>
+                            <constraint firstItem="fpz-bk-AoP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="TO9-vh-LCG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fpz-bk-AoP" secondAttribute="bottom" constant="-50" id="WP5-Jp-5AK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fpz-bk-AoP" secondAttribute="trailing" constant="-30" id="b0M-79-h96"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fpz-bk-AoP" id="6UO-FJ-sqt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="96a-pM-IcD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
